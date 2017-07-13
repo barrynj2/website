@@ -577,7 +577,7 @@ SOCIAL ICON
 
 .myphoto{
     position: relative;
-    background: url(assets/images/cinci.jpg) bottom center no-repeat;
+
     background-size: contain;
 	background-position:50%;
 }
