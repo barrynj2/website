@@ -70,16 +70,6 @@ jQuery(function ($) {
     // Sticky Menu
     // -------------------------------------------------------------
 
-    (function () {
-        $('.header').sticky({
-            topSpacing: 0
-        });
-
-        $('body').scrollspy({
-            target: '.navbar-custom',
-            offset: 70
-        })
-    }());
 
 
 
@@ -141,7 +131,7 @@ jQuery(function ($) {
                 //your configuration goes here
                 easing: 'easeOut',
                 delay: 3000,
-                barColor:'#68c3a3',
+                barColor:'#41bbf4',
                 trackColor:'rgba(255,255,255,0.2)',
                 scaleColor: false,
                 lineWidth: 8,
