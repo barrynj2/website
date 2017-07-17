@@ -254,7 +254,7 @@ ul.list-check li{
 ul.list-check li::before {
     content: "\f00c";
     font-family: fontawesome;
-    color: #68c3a3;
+    color: #41bbf4;
     margin-right: 10px;
 }
 
