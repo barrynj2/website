@@ -1,40 +1,5 @@
-/*
-Theme Name: IAMX
-Author: Trendy Theme
-Author URL: trendytheme.net
-*/
-
-/*
-    = Preloader
-    = Animated scrolling / Scroll Up
-    = Full Screen Slider
-    = Sticky Menu
-    = Back To Top
-    = Countup
-    = Progress Bar
-    = More skill
-    = Shuffle
-    = Magnific Popup
-    = Vidio auto play
-    = Fit Vids
-    = Google Map
-
-*/
 
 jQuery(function ($) {
-
-    'use strict';
-
-    /* ---------------------------------------------- /*
-     * Preloader
-    /* ---------------------------------------------- */
-
-    $(window).ready(function() {
-        $('#pre-status').fadeOut();
-        $('#tt-preloader').delay(350).fadeOut('slow');
-    });
-
-
 
 
     // -------------------------------------------------------------
@@ -63,29 +28,6 @@ jQuery(function ($) {
             $(".tt-fullHeight").height($(window).height());
         });
 
-    }());
-
-
-    // -------------------------------------------------------------
-    // Sticky Menu
-    // -------------------------------------------------------------
-
-
-
-
-
-    // -------------------------------------------------------------
-    // Back To Top
-    // -------------------------------------------------------------
-
-    (function () {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 100) {
-                $('.scroll-up').fadeIn();
-            } else {
-                $('.scroll-up').fadeOut();
-            }
-        });
     }());
 
 
@@ -178,44 +120,6 @@ jQuery(function ($) {
     }());
 
 
-    // -------------------------------------------------------------
-    // Magnific Popup
-    // -------------------------------------------------------------
-
-    (function () {
-      $('.image-link').magnificPopup({
-
-        gallery: {
-          enabled: true
-        },
-        removalDelay: 300, // Delay in milliseconds before popup is removed
-        mainClass: 'mfp-with-zoom', // this class is for CSS animation below
-        type:'image'
-      });
-
-    }());
-
-
-
-    (function () {
-        $('.popup-video').magnificPopup({
-            disableOn: 700,
-            type: 'iframe',
-            mainClass: 'mfp-with-zoom',
-            removalDelay: 300,
-            preloader: false,
-            fixedContentPos: false
-        });
-    }());
-
-
-
-
-
-  
-
-
-
 
     // -------------------------------------------------------------
     // STELLAR FOR BACKGROUND SCROLLING
@@ -248,47 +152,6 @@ jQuery(function ($) {
         }).init();
 
     }());
-
-
-
-    // -------------------------------------------------------------
-    // Contact Form
-    // -------------------------------------------------------------
-
-    $('#contactForm').on('submit',function(e){
-
-        e.preventDefault();
-
-        var $action = $(this).prop('action');
-        var $data = $(this).serialize();
-        var $this = $(this);
-
-        $this.prevAll('.alert').remove();
-
-        $.post( $action, $data, function( data ) {
-
-            if( data.response=='error' ){
-
-                $this.before( '<div class="alert alert-danger">'+data.message+'</div>' );
-            }
-
-            if( data.response=='success' ){
-
-                $this.before( '<div class="alert alert-success">'+data.message+'</div>' );
-                $this.find('input, textarea').val('');
-            }
-
-        }, "json");
-
-    });
-
-
-
-
-    // -------------------------------------------------------------
-    // Google Map
-    // -------------------------------------------------------------
-
 
 
 
